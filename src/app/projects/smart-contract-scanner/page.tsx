@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, ShieldAlert, FileCode, Terminal, Lock, Flame } from "lucide-react";
+import { ArrowLeft, ShieldAlert, FileCode, Terminal, Lock, Flame, Github, ExternalLink } from "lucide-react";
 
 // --- REUSABLE CODE COMPONENT ---
 const CodeWindow = ({ title, code, lang }: { title: string, code: string, lang: string }) => (
@@ -60,9 +60,31 @@ export default function SmartContractScannerCaseStudy() {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
             Smart Contract <span className="text-slate-600">Vulnerability Scanner</span>
           </h1>
-          <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+          <p className="text-xl text-slate-400 max-w-2xl leading-relaxed mb-8">
             Automated detection pipeline identifying <span className="text-red-400 font-bold">15+ critical vulnerability patterns</span> (Reentrancy, Overflow) with zero false negatives.
           </p>
+          
+          {/* ACTION BUTTONS (Added Links Here) */}
+          <div className="flex flex-wrap gap-4">
+            <a 
+              href="https://sc-vulnerability-scanner-12sr.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded transition-all hover:scale-105"
+            >
+              <ExternalLink size={18} />
+              Live Demo
+            </a>
+            <a 
+              href="https://github.com/ayush-roy-21/SC-Vulnerability-Scanner" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 text-white font-bold rounded transition-all hover:scale-105"
+            >
+              <Github size={18} />
+              View Source Code
+            </a>
+          </div>
         </header>
 
         {/* --- VISUAL SYSTEM ARCHITECTURE --- */}
@@ -236,12 +258,29 @@ export default function SmartContractScannerCaseStudy() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="text-center py-12 border-t border-slate-900">
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold rounded transition-all hover:scale-105">
-            <Flame size={18} />
-            Run a Security Scan
-          </Link>
+        {/* CTA (Updated Links Here) */}
+        <section className="text-center py-12 border-t border-slate-900 flex flex-col items-center justify-center gap-6">
+          <h2 className="text-2xl font-bold text-white">Ready to test your smart contracts?</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="https://sc-vulnerability-scanner-12sr.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold rounded transition-all hover:scale-105"
+            >
+              <ExternalLink size={18} />
+              Launch Scanner
+            </a>
+            <a 
+              href="https://github.com/ayush-roy-21/SC-Vulnerability-Scanner" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded border border-slate-700 transition-all hover:scale-105"
+            >
+              <Github size={18} />
+              View on GitHub
+            </a>
+          </div>
         </section>
         
       </div>
