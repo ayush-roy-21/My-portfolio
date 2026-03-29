@@ -1,10 +1,9 @@
 Portfolio website built with Next.js App Router, Tailwind CSS, Framer Motion, and GSAP.
 
-## Quick start
-
-```bash
-npm install
-npm run dev
+## 🚀 Live Demo
+Check out the project in action here:  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge)](https://my-portfolio-msk9.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ```
 
 ## Project structure
